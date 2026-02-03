@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "4bd9aa40-0818-4fd2-a199-8bf06bfca89f",
+		"name": "Rz_B2B",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10220872"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"1251012\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/b2b/Account/signIn",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"b2b",
+								"Account",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "AppToken",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEyNTEwMTIiLCJrZXkiOiIxNiIsIklzQXZhaWxhYmxlIjoiVFJVRSIsIm5iZiI6MTc2NDU4MjAxNCwiZXhwIjoxNzY3MTc0MDE0LCJpYXQiOjE3NjQ1ODIwMTR9.t2S-9mDi79pwhnv_EvoYEEMhuJOkRZ2RiSQn3COWNwkMrQBWEv_5JRdErkPCjh8ega91m2pmvB0A59Ev2aI7gw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/b2b/Account/CheckToken",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"b2b",
+								"Account",
+								"CheckToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "AppToken",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEyNTEwMTIiLCJrZXkiOiIxNiIsIklzQXZhaWxhYmxlIjoiVFJVRSIsIm5iZiI6MTc2NDU4MjAxNCwiZXhwIjoxNzY3MTc0MDE0LCJpYXQiOjE3NjQ1ODIwMTR9.t2S-9mDi79pwhnv_EvoYEEMhuJOkRZ2RiSQn3COWNwkMrQBWEv_5JRdErkPCjh8ega91m2pmvB0A59Ev2aI7gw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/b2b/Account/RefreshToken",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"b2b",
+								"Account",
+								"RefreshToken"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "AppToken",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEyNTEwMTIiLCJrZXkiOiIxNiIsIklzQXZhaWxhYmxlIjoiVFJVRSIsIm5iZiI6MTc2NDU4MjAxNCwiZXhwIjoxNzY3MTc0MDE0LCJpYXQiOjE3NjQ1ODIwMTR9.t2S-9mDi79pwhnv_EvoYEEMhuJOkRZ2RiSQn3COWNwkMrQBWEv_5JRdErkPCjh8ega91m2pmvB0A59Ev2aI7gw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "FileString",
+									"value": "UEsDBBQAAAAIABicfVuYoFdteAMAAIwWAAAJAAAAZGF0YS5qc29utZjNTttAFIX3SLzDKGuobI+d2F0Wqbt202VVVYhSqWooqBKLquqCypDIT9B1F01iQSIHKnY8x0yepveOHRt8Z0zo2FkkMBHo07k/54zfbm8x9h3fGOt9/Pz+4OjV8eGnL3vHHw57z1nP7e0U3+0dvTwdDl/vH6lzMRUTkYmJvJAJE+lqxsQ1/JaIZfkHL/a/HhT/xcNX+cWbw+EQTj33meM45eHpycnwGxwP8BQPf+z8H5qMAUmeyxHwLYByoSfioVMnCrRA3BZI3KBOIpVjebER2KAO5vpaMs+abAJVS2WCXHciW11sqFxYB9TzRS3wTUXG5JipfltsBBcR9Twt3W4b8gHek+iiPhkDLVxozXYN7ZbAQKYMuu8cywtYt3IsMj1a4JK26+sn1LUWbjWDVhux1UzGADdSihmxSLOFeqp+S1TiN+gWNxB5ZHG4g46EyqsINZRnsEEWuGunoFcDm7uZWk5rZFDEsUixjGz1C5VDCVVBsfFiwJ6YWDe1BN8aFnav+JMPQwp7bgY/TkFMHjl6Ni8kOrqOvsb2S66scSJ/onhoo9coKRR8hEslaRKRExczgLbGCdJhWRdMLAHtjjWOr08WXqDfePY2m675bmHXXZVN+BdkPDPQDfw6nV48+3FJ64Msz+EjVhqifRgAaR/q1bNOTVUX3kFeSas8oIZ4hB5iQgzqiNwQV6w3dK5iXuSFmOMsqwg6MqBFZFN3VN6nGFpEStpVz5UDO8lXiCmcBxHZxJx3lDirWOI7ngmH7DQ9TXsKFcOoqheb24lEEdeQRVps9Ic9xSODaF5I3VSvmnW0XM3EpTJ5TL6XuL4AUtxAcFK2lTUbQkTzecd+tVawdITHbavv0FJ3hAnSZUhzBR+JgYdHnGyyfkcjoS6raEzV3VDc5CdKsCDgWkafc2L1XJ+Ld61Fg3mdQzCK124FDjotolMQ6icE+Oi9uiMNwSwRKcsTe6GoiYp0Wld28ICqGoq5WDaMAgCSgdVHkFa2cZHS0U3VA6Z5g7/7vkOMwnDXbym/5WzgFLj7cI1Ah/umfUzY+vrC8pZsbG1k+WDwe8mxBkYyr16zoKWbTcFVPRoBNv0K8bhDs6RetIF1lsR7ldq9Y34vwT7E8cjG8PTRtq2bfh7XHvcnzS7rKIkUl1LMH3B1GcsNHxEOSPfrraAKI9tb7/4BUEsBAhQAFAAAAAgAGJx9W5igV214AwAAjBYAAAkAAAAAAAAAAAAAAAAAAAAAAGRhdGEuanNvblBLBQYAAAAAAQABADcAAACfAwAAAAA=",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/b2b/File/Upload",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"b2b",
+								"File",
+								"Upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FrontEnd",
+			"item": [
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "SignUp",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "AppToken",
+										"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEyNTEwMTIiLCJrZXkiOiIxNiIsImV4cGlyZURhdGUiOiIyMDI2LzAxLzIyIiwiSXNBdmFpbGFibGUiOiJUUlVFIiwibmJmIjoxNzY2NDkxNTk1LCJleHAiOjE3NjkwODM1OTUsImlhdCI6MTc2NjQ5MTU5NX0.gqDZn-FsOkW6Y61DiLvwZRvuDyzYgHkoh4IgZiB4xJVqG6RMFTuu5t8o8sV277ojg25Y_J77lVDh5gKWYr_NqQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"PhoneNumber\":\"09338030405\",\r\n    \"NationalCode\":\"3861147904\",\r\n    \"Type\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/b2b/Customer/SignUp",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Customer",
+										"SignUp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "VerifySignUp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/b2b/Customer/SignUp",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Customer",
+										"SignUp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SignIn",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"PhoneNumber\":\"09118908255\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/b2b/Customer/SignIn",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Customer",
+										"SignIn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "VerifySignIn",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/b2b/Customer/VerifySignIn",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Customer",
+										"VerifySignIn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ResendOTP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/b2b/Customer/SignUp",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Customer",
+										"SignUp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "AppToken",
+										"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjA5MzM4MDMwNDA1IiwiaXNjdXN0b21lciI6InRydWUiLCJSZWdpc3RlckNvbXBsZXRlZCI6IlRSVUUiLCJuYmYiOjE3NjY2NTY3NDMsImV4cCI6MTc2OTI0ODc0MywiaWF0IjoxNzY2NjU2NzQzfQ.BU6oiDZYB6f78y9Cv10tC1CCYK_vqQb0XnfQMtMLWjuyN9BUkhXa-7vTFMvVq9eWCOQf1NQ6NywL293BKJ59lw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/b2b/Customer/Profile",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Customer",
+										"Profile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Commodity",
+					"item": [
+						{
+							"name": "Stores",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "AppToken",
+										"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjA5MzM4MDMwNDA1IiwiaXNjdXN0b21lciI6InRydWUiLCJSZWdpc3RlckNvbXBsZXRlZCI6IlRSVUUiLCJuYmYiOjE3NjY2NTY3NDMsImV4cCI6MTc2OTI0ODc0MywiaWF0IjoxNzY2NjU2NzQzfQ.BU6oiDZYB6f78y9Cv10tC1CCYK_vqQb0XnfQMtMLWjuyN9BUkhXa-7vTFMvVq9eWCOQf1NQ6NywL293BKJ59lw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/b2b/Commodity/Stores",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Commodity",
+										"Stores"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Stock",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "AppToken",
+										"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjA5MzM4MDMwNDA1IiwiaXNjdXN0b21lciI6InRydWUiLCJSZWdpc3RlckNvbXBsZXRlZCI6IlRSVUUiLCJuYmYiOjE3NjY2NTY3NDMsImV4cCI6MTc2OTI0ODc0MywiaWF0IjoxNzY2NjU2NzQzfQ.BU6oiDZYB6f78y9Cv10tC1CCYK_vqQb0XnfQMtMLWjuyN9BUkhXa-7vTFMvVq9eWCOQf1NQ6NywL293BKJ59lw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/b2b/Commodity/Stock",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"b2b",
+										"Commodity",
+										"Stock"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": ""
+		},
+		{
+			"key": "baseurl",
+			"value": "",
+			"disabled": true
+		}
+	]
+}

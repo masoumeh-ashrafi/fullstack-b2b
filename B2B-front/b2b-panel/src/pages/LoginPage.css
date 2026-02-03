@@ -1,0 +1,140 @@
+/* LoginPage.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a1a1a; /* پس‌زمینه تیره طبق تصویر */
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+.login-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  width: 380px; /* عرض استاندارد کارت طبق فیگما */
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.login-label {
+  display: block;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* استایل باکس موبایل دقیقا مثل تصویر */
+.phone-input-container {
+  display: flex;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  align-items: center;
+  direction: ltr; /* برای قرارگیری +۹۸ سمت چپ در کانتینر */
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.phone-input-container:focus-within {
+  border-color: #f68910;
+}
+
+.country-code {
+  padding: 0 15px;
+  border-right: 1px solid #eee;
+  color: #111;
+  background: #f8f9fa;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.phone-input {
+  border: none;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.main-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #f68910;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.main-button:hover {
+  background-color: #e07a0d;
+}
+
+.main-button:disabled {
+  background-color: #ffcc94;
+  cursor: not-allowed;
+}
+
+.error-text-small {
+  color: #dc3545;
+  font-size: 12px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-text {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+.link-text {
+  color: #f68910;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+  text-decoration: none;
+}
