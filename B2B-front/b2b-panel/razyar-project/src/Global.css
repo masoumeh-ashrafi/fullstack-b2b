@@ -1,0 +1,42 @@
+/* Global.css */
+:root {
+  --primary-color: #4338CA;
+  --bg-light: #F9FAFB;
+  --border-color: #E5E7EB;
+  --text-gray: #6B7280;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Vazir', Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-light);
+}
+
+/* استایل‌های مشترک سایدبار که در همه صفحات هست */
+.sidebar {
+  width: 280px;
+  background: #fff;
+  border-left: 1px solid var(--border-color);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  background: #F3F4F6;
+}

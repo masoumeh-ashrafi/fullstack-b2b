@@ -1,0 +1,312 @@
+/* ساختار اصلی مشابه StoresPage برای جلوگیری از تداخل فیزیکی */
+.dashboard-wrapper {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  direction: rtl !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+.right-sidebar {
+  width: 280px;
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  max-width: 120px;
+  margin: 0 auto 32px;
+  display: block;
+}
+
+.sidebar-search {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sidebar-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.cmd-key {
+  font-size: 11px;
+  color: #94a3b8;
+  border: 1px solid #e2e8f0;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: white;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: #f8fafc;
+}
+
+.sub-menu-item {
+  padding: 10px 40px;
+  color: #f97316;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.blue-dot-active {
+  width: 6px;
+  height: 6px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+
+.sidebar-bottom-sections {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.support-card {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orange-box {
+  background: #f97316;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.profile-combo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Main Layout */
+.main-layout-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.top-nav {
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.search-pill {
+  background: #f1f5f9;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 350px;
+}
+
+.search-pill input {
+  background: transparent;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.main-content {
+  padding: 32px;
+}
+
+.alert-box {
+  background: #f0f9ff;
+  border-right: 4px solid #0095ff;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: #0076cc;
+  font-size: 14px;
+}
+
+.info-icon-container.blue-bg {
+  background: #0095ff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Table Style */
+.table-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.table-header {
+  margin-bottom: 20px;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  text-align: right;
+  padding: 16px;
+  color: #94a3b8;
+  font-size: 13px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fcfdfe;
+}
+
+.data-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f8fafc;
+  font-size: 14px;
+}
+
+.code-cell {
+  font-weight: bold;
+  color: #64748b;
+}
+
+.stock-cell {
+  font-weight: 600;
+}
+
+.out-of-stock {
+  color: #dc2626 !important;
+}
+
+.clickable-row:hover {
+  background: #fcfdfe;
+}
+/* تنظیم کانتینر اصلی سایدبار */
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-left: 1px solid #f1f5f9;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* کوچک کردن و وسط‌چین کردن لوگو */
+.sidebar-logo {
+  width: 100px !important; /* اندازه لوگو رو کنترل می‌کنه */
+  height: auto;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+/* استایل باکس سرچ سایدبار */
+.sidebar-search {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 25px;
+}
+
+/* آیتم‌های منو */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #64748b;
+  margin-bottom: 5px;
+}
+
+.menu-item.active {
+  background-color: #eff6ff;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/* بخش پروفایل پایین سایدبار (مثل عکس) */
+.profile-combo {
+  margin-top: auto; /* پروفایل رو می‌چسبونه به پایین */
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
