@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 # fullstack-b2b
 Fullstack B2B application built with React (frontend) and FastAPI (backend).
-=======
+
 # پروژه فول‌استک B2B 🚀 (React + FastAPI)
 
 این پروژه یک اپلیکیشن فول‌استک B2B است که:
@@ -52,4 +52,4 @@ npm run dev
 فرانت:
 
 http://localhost:5173
->>>>>>> 937f1a7 (Initial commit: FastAPI + React fullstack)
+ 937f1a7 (Initial commit: FastAPI + React fullstack)
