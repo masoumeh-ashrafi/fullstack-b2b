@@ -47,6 +47,9 @@ API: http://127.0.0.1:8000
 cd B2B-front
 npm install
 npm run dev
+git add README.md
+git commit -m "Fix README merge markers"
+git push
 
 
 فرانت:
